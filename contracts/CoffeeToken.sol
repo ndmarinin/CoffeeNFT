@@ -8,8 +8,7 @@ contract MyToken is ERC721 {
     uint256 NFTPrice = 0.01 ether;
 
     constructor() ERC721("MyToken", "MTK") {}
-
-
+    
     function safeMintNFT(address to, uint256 tokenId) public payable {
         _safeMint(to, tokenId);
     }
