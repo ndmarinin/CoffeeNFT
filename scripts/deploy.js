@@ -4,7 +4,7 @@ async function main() {
   console.log("Deploying contracts with the account:", deployer.address);
   const CoffeeToken = await ethers.getContractFactory("CoffeeToken");
   const coffeeToken = await CoffeeToken.deploy();
-  console.log("Token address:", coffeeToken.address);
+  console.log("Token address:", coffeeToken.getAddress());
 }
 
 main()
