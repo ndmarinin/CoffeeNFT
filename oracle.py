@@ -12,14 +12,14 @@ siberium_url = 'https://rpc.test.siberium.net'
 # Create the node connection
 w3 = Web3(Web3.HTTPProvider(siberium_url))
 
-token_address = '0xd5e552dD8507c6cBaDD468f866A9Ad8a704ae669'
+token_address = '0x48BB844EE3B5b8e463ecad9d9494AB81d99Ba492'
 abi_dir = os.getcwd() + r'\\artifacts\\contracts\\CoffeeToken.sol'
 abi_data = json.loads(open(abi_dir + '\\CoffeeToken.json').read())['abi']
 token_contract = w3.eth.contract(address=token_address, abi=abi_data)
 token_pool = token_contract.functions
 
 owner_private_key = os.environ.get('PRIVATE_KEY')
-owner_address = 
+owner_address = '0xd5e552dD8507c6cBaDD468f866A9Ad8a704ae669'
 
 
 def mint_nft(to, id):
@@ -43,7 +43,7 @@ def get_balance(to):
 
 
 def main():
-    to = '' # попробуй вставить свой адрес
+    to = '0xd5e552dD8507c6cBaDD468f866A9Ad8a704ae669'
     id = 1  # nft id, всё равно какой, главное чтоб не повторялось
     mint_nft(to, id)
     get_balance(to)
