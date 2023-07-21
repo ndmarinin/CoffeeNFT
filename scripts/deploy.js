@@ -3,7 +3,7 @@
   
     console.log("Deploying contracts with the account:", deployer.address);
   
-    const token = await ethers.deployContract("CoffeeToken", {gas: ethers.parseEther("0.000001")});
+    const token = await ethers.deployContract("CoffeeToken");
   
     console.log("Token address:", await token.getAddress());
   }

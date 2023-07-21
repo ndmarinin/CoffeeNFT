@@ -11,7 +11,8 @@ module.exports = {
     },
     siberium_test: {
       url: API_URL,
-      accounts: [PRIVATE_KEY]
+      accounts: [PRIVATE_KEY],
+      gasPrice: 50000000000
     }
   }
 };
