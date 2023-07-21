@@ -19,16 +19,15 @@ token_contract = w3.eth.contract(address=token_address, abi=abi_data)
 token_pool = token_contract.functions
 
 owner_private_key = os.environ.get('PRIVATE_KEY')
-owner = w3.eth.account.privateKeyToAccount(private_key=owner_private_key)
+owner_address = 
 
 
 def mint_nft(to, id):
-    user_address = owner.address
     transaction = token_pool.safeMintNFT(to, id).build_transaction({
         'gas': 100000,
         'gasPrice': w3.to_wei('1', 'gwei'),
-        'from': user_address,
-        'nonce': w3.eth.get_transaction_count(user_address),
+        'from': owner_address,
+        'nonce': w3.eth.get_transaction_count(owner_address),
         'value': w3.to_wei(0.01, 'ether'),
     })
 
