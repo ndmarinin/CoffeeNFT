@@ -25,7 +25,7 @@ owner_address = '0xd5e552dD8507c6cBaDD468f866A9Ad8a704ae669'
 def mint_nft(to, id):
     transaction = token_pool.safeMintNFT(to, id).build_transaction({
         'gas': 100000,
-        'gasPrice': w3.to_wei('1', 'gwei'),
+        'gasPrice': w3.to_wei('5', 'gwei'),
         'from': owner_address,
         'nonce': 1,
         'value': w3.to_wei(0.01, 'ether'),
