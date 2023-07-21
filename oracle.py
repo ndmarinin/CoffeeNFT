@@ -12,7 +12,7 @@ siberium_url = 'https://rpc.test.siberium.net'
 # Create the node connection
 w3 = Web3(Web3.HTTPProvider(siberium_url))
 
-token_address = '0x48BB844EE3B5b8e463ecad9d9494AB81d99Ba492'
+token_address = '0x91Af1Bca11127fEE0DCd8e760c41Ad8FAf81A278'
 abi_dir = os.getcwd() + r'\\artifacts\\contracts\\CoffeeToken.sol'
 abi_data = json.loads(open(abi_dir + '\\CoffeeToken.json').read())['abi']
 token_contract = w3.eth.contract(address=token_address, abi=abi_data)
@@ -27,7 +27,7 @@ def mint_nft(to, id):
         'gas': 100000,
         'gasPrice': w3.to_wei('1', 'gwei'),
         'from': owner_address,
-        'nonce': w3.eth.get_transaction_count(owner_address),
+        'nonce': 1,
         'value': w3.to_wei(0.01, 'ether'),
     })
 
