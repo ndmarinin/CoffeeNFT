@@ -7,7 +7,7 @@ module.exports = {
   networks: {
     siberium_main:{
       url: API_MAIN_URL,
-      accoutns: [PRIVATE_KEY]
+      accounts: [PRIVATE_KEY]
     },
     siberium_test: {
       url: API_URL,
