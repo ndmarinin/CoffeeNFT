@@ -10,6 +10,7 @@ contract CoffeeToken is ERC721 {
     constructor() ERC721("CoffeeToken", "CFT") {}
     
     function safeMintNFT(address to, uint256 tokenId) public payable {
+        require(msg.value == NFTPrice, 'wrong price');
         _safeMint(to, tokenId);
     }
 }
